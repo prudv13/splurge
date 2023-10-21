@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.scss'
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
 const Header = () => {
   return (
@@ -38,7 +39,7 @@ const Header = () => {
 
             <div className='header-cnt-top-r'>
               <ul className='top-links flex align-center'>
-                <li>
+                <li className='mt-2'>
                   <Link to='/' className='top-link-itm'>
                     <span className='top-link-icon mx-2'>
                       <i className='fa-solid fa-circle-question'></i>
@@ -46,14 +47,14 @@ const Header = () => {
                     <span className='top-link-itm-txt'>Support</span>
                   </Link>
                 </li>
-                <li className='vert-line'></li>
-                <li>
+                <li className='vert-line mt-2'></li>
+                <li className='mt-2'>
                   <Link to='/' className=''>
                     <span className='top-link-itm-txt'>Register</span>
                   </Link>
                 </li>
-                <li className='vert-line'></li>
-                <li>
+                <li className='vert-line mt-2'></li>
+                <li className='mt-2'>
                   <Link to='/' className=''>
                     <span className='top-link-itm-txt'>Login</span>
                   </Link>
@@ -62,6 +63,11 @@ const Header = () => {
             </div>
 
           </div>
+
+          <div className='header-cnt-bottom'>
+            <Navbar />
+          </div>
+
         </div>
       </div>
     </header>
