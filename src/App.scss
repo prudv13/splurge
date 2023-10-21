@@ -4,8 +4,8 @@
 
 $clr-black: #000;
 $clr-white: #fff;
-$clr-yellow: #fcc419;
-$clr-light-yellow: #ffd43b;
+$clr-yellow: #fab005;
+$clr-light-yellow: #fcc419;
 $clr-light-gray: #F2F2F2;
 $clr-light: #F4F4F4;
 $clr-whitesmoke: #F5F5F5;
@@ -199,6 +199,52 @@ input, textarea, select {
     &-7{padding-left: 72px; padding-right: 72px;}
 }
 
+.mt{
+    &-1{margin-top: 1px;}
+    &-2{margin-top: 2px; }
+    &-3{margin-top: 3px;}
+    &-4{margin-top: 4px;}
+    &-5{margin-top: 5px;}
+    &-6{margin-top: 6px;}
+    &-7{margin-top: 7px;}
+    &-8{margin-top: 8px;}
+    &-9{margin-top: 9px;}
+    &-10{margin-top: 10px;}
+    &-11{margin-top: 11px;}
+    &-12{margin-top: 12px;}
+    &-13{margin-top: 13px;}
+    &-14{margin-top: 14px;}
+    &-15{margin-top: 15px;}
+    &-16{margin-top: 16px;}
+    &-17{margin-top: 17px;}
+    &-18{margin-top: 18px;}
+    &-19{margin-top: 19px;}
+    &-20{margin-top: 20px;}
+}
+
+.mb{
+    &-1{margin-bottom: 1px;}
+    &-2{margin-bottom: 2px;}
+    &-3{margin-bottom: 3px;}
+    &-4{margin-bottom: 4px;}
+    &-5{margin-bottom: 5px;}
+    &-6{margin-bottom: 6px;}
+    &-7{margin-bottom: 7px;}
+    &-8{margin-bottom: 8px;}
+    &-9{margin-bottom: 9px;}
+    &-10{margin-bottom: 10px;}
+    &-11{margin-bottom: 11px;}
+    &-12{margin-bottom: 12px;}
+    &-13{margin-bottom: 13px;}
+    &-14{margin-bottom: 14px;}
+    &-15{margin-bottom: 15px;}
+    &-16{margin-bottom: 16px;}
+    &-17{margin-bottom: 17px;}
+    &-18{margin-bottom: 18px;}
+    &-19{margin-bottom: 19px;}
+    &-20{margin-bottom: 20px;}
+}
+
 .my{
     &-1{margin-top: 4px; margin-right: 4px;}
     &-2{margin-top: 8px; margin-bottom: 8px;}
@@ -228,10 +274,10 @@ input, textarea, select {
 // lines ==========================================
 
 .vert-line {
-    width: 2px;
-    background-color: lighten($clr-yellow, 10%);
+    width: 1.5px;
+    background-color: lighten($clr-yellow, 20%);
     height: 16px;
-    margin: 0 12px;
+    margin: 4px 12px;
 }
 
 .no-wrap{

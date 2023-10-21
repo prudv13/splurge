@@ -2,10 +2,10 @@
 
 .header{
     background: #fab005;
-    background: linear-gradient(180deg, #fcc419 0%, #ffd43b 100%);
+    background: linear-gradient(180deg, #fab005 0%, #fcc419 100%);
 
     .header-cnt-top{
-        border-bottom: 1px solid #fcc419;
+        border-bottom: 1px solid lighten($clr-yellow, 10%);
     }
 
     @media screen and (max-width: 992px) {
