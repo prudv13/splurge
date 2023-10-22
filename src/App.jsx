@@ -13,8 +13,14 @@ const App = () => {
         <Sidebar />
 
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path ='/' element={<Home />} />
+          <Route path ='/product/:id' element={<ProductSingle />} />
+          <Route path ='/category/:category' element = {<CategoryProduct />}/>
+          <Route path = '/cart' element={<Cart />} />
+          <Route path = '/search/:searchTerm' element={<Search />} />
         </Routes>
+
+        <Footer />
     </div>
   )
 }
