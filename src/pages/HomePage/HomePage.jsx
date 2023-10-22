@@ -1,9 +1,14 @@
 import React from 'react'
 import './Home.scss'
+import HeaderSlider from '../../components/Slider/Slider';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <main>
+      <div className='slider-wrapper'>
+        <HeaderSlider />
+      </div>
+    </main>
   )
 }
 
