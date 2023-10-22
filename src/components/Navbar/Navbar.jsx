@@ -1,11 +1,13 @@
 import React from 'react'
 import './Navbar.scss'
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setSidebarOn } from '../../store/sidebarSlice';
+import { getAllCategories } from '../../store/categorySlice';
 const Navbar = () => {
 
   const dispatch = useDispatch();
+  const categories = useSelector(getAllCategories);
 
   return (
     <nav className='navbar'>
@@ -35,9 +37,13 @@ const Navbar = () => {
           </div>
 
           <ul className='navbar-nav flex align-center fs-12 fw-4 font-manrope'>
-            <li className='nav-item no-wrap'>
-              <Link to='' className='nav-link text-capitalize'>Category here</Link>
-            </li>
+            {
+              categories.slice(0,8).map((category, idx) => (
+                <li className='nav-item no-wrap' key={idx}>
+                  <Link to={`category/${category}`} className='nav-link text-capitalize'>{category}</Link>
+                </li>
+              ))
+            }
           </ul>
         </div>
 
