@@ -8,7 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div className='app'>
+    <div>
         <Header />
         <Sidebar />
 

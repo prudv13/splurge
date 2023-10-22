@@ -18,7 +18,7 @@ const HeaderSlider = () => {
     slidesToScroll: 1
   };
   return (
-    <div className='mt-20'>
+    <div>
       <div className='container'>
         <div className='slider-content overflow-x-hidden'>
           <Slider {...settings}>
