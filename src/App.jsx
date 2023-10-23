@@ -19,6 +19,7 @@ const App = () => {
           <Route path = '/cart' element={<Cart />} />
           <Route path = '/search/:searchTerm' element={<Search />} />
         </Routes>
+        
         <Footer />
     </div>
   )

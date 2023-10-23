@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 const Product = ({product}) => {
 
   return (
-    <Link to='' key={product?.id}>
+    <Link to={`/product/${product?.id}`} key={product?.id}>
       <div className='product-item bg-white'>
         <div className='category'>{product?.category}</div>
         <div className='product-item-img'>

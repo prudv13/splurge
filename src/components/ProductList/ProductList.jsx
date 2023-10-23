@@ -4,7 +4,7 @@ import Product from '../Product/Product'
 import PropTypes from 'prop-types';
 
 const ProductList = ({products}) => {
-  console.log(products);
+
   return (
     <div className='product-lists grid bg-whitesmoke my-3'>
     {
