@@ -1,0 +1,9 @@
+@import '../../App.scss';
+
+.footer{
+    background-color: $clr-yellow;
+    .copyright-text{
+        display: block;
+        margin-top: 0.7rem;
+    }
+}

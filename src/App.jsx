@@ -11,7 +11,7 @@ const App = () => {
     <div>
         <Header />
         <Sidebar />
-
+        
         <Routes>
           <Route path ='/' element={<Home />} />
           <Route path ='/product/:id' element={<ProductSingle />} />
@@ -19,7 +19,6 @@ const App = () => {
           <Route path = '/cart' element={<Cart />} />
           <Route path = '/search/:searchTerm' element={<Search />} />
         </Routes>
-
         <Footer />
     </div>
   )
