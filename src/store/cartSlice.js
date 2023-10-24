@@ -52,6 +52,47 @@ const cartSlice = createSlice({
                 storeInLocalStorage(state.carts);
             }
         },
+        removeFromCart: (state, action) => {
+            const tempCart = state.carts.filter(item => item.id !== action.payload);
+            state.carts = tempCart;
+            storeInLocalStorage(state.carts);
+        },
+        clearCart: (state) => {
+            state.carts = [];
+            storeInLocalStorage(state.carts);
+        },
+        getCartTotal: (state) => {
+            state.totalAmount = state.carts.reduce((cartTotal, cartItem) => cartTotal += cartItem.totalPrice, 0);
+            state.itemsCount = state.carts.length;
+        },
+        toggleCartQty: (state, action) => {
+            const tempCart = state.carts.map(item => {
+                if(item.id === action.payload.id){
+                    let tempQty = item.quantity;
+                    let tempTotalPrice = item.totalPrice;
+
+                    if(action.payload.type === 'INC'){
+                        tempQty++;
+                        if(tempQty === item.stock) tempQty = item.stock;
+                        tempTotalPrice = tempQty*item.discountedPrice;
+                    }
+
+                    if(action.payload.type === 'DESC'){
+                        tempQty--;
+                        if(tempQty < 1) tempQty = 1;
+                        tempTotalPrice = tempQty*item.discountedPrice;
+                    }
+
+                    return {...item, quantity: tempQty, totalPrice: tempTotalPrice};
+                }
+                else{
+                    return item;
+                }
+            });
+
+            state.carts = tempCart;
+            storeInLocalStorage(state.carts);
+        },
         setCartMessageOn: (state) => {
             state.isCartMessageOn = true;
         },
@@ -61,6 +102,8 @@ const cartSlice = createSlice({
     }
 });
 
-export const {addToCart, setCartMessageOff, setCartMessageOn} = cartSlice.actions;
+export const {addToCart, setCartMessageOff, setCartMessageOn, getCartTotal, toggleCartQty} = cartSlice.actions;
+export const getAllCarts = (state) => state.cart.carts;
+export const getCartItemsCount = (state) => state.cart.itemsCount;
 export const getCartMessageStatus = (state) => state.cart.isCartMessageOn;
 export default cartSlice.reducer;
