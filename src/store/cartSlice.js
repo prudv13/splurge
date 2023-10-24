@@ -102,7 +102,7 @@ const cartSlice = createSlice({
     }
 });
 
-export const {addToCart, setCartMessageOff, setCartMessageOn, getCartTotal, toggleCartQty} = cartSlice.actions;
+export const {addToCart, setCartMessageOff, setCartMessageOn, getCartTotal, toggleCartQty, removeFromCart, clearCart} = cartSlice.actions;
 export const getAllCarts = (state) => state.cart.carts;
 export const getCartItemsCount = (state) => state.cart.itemsCount;
 export const getCartMessageStatus = (state) => state.cart.isCartMessageOn;

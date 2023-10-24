@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Navbar.scss'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSidebarOn } from '../../store/sidebarSlice';
 import { getAllCategories } from '../../store/categorySlice';
+import { getAllCarts, getCartItemsCount, getCartTotal } from '../../store/cartSlice';
+import CartModal from '../CartModal/CartModal';
+
+
 const Navbar = () => {
 
   const dispatch = useDispatch();
   const categories = useSelector(getAllCategories);
+  const carts = useSelector(getAllCarts);
+  const itemsCount = useSelector(getCartItemsCount);
+
+  useEffect(() => {
+    dispatch(getCartTotal());
+  }, [carts]);
 
   return (
     <nav className='navbar'>
@@ -47,11 +57,13 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <Link to='/cart' className='navbar-cart flex align-center'>
-          <i className='fa-solid fa-cart-shopping'></i>
-          <div className='cart-items-value mx-2'>0</div>
-          <i className="fa-solid fa-caret-down fa-xs"></i>
-        </Link>
+        <div className='navbar-cart flex align-center'>
+          <Link to = "/cart" className='cart-btn'>
+            <i className='fa-solid fa-cart-shopping'></i>
+            <div className='cart-items-value'>{itemsCount}</div>
+            <CartModal carts = {carts} />
+          </Link>
+        </div>
       </div>
     </nav>
   )
