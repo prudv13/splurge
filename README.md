@@ -1,12 +1,12 @@
 # Splurge - Shopping Application
 
-[![N|Logo](https://res.cloudinary.com/dqab7rimk/image/upload/v1698496035/prudhvi-portfolio/splurge-img_kl6pag.png)](https://splurge.netlify.app)
+[![N|Logo](https://res.cloudinary.com/dqab7rimk/image/upload/v1698496035/prudhvi-portfolio/splurge-img_kl6pag.png)](https://splurge-react.netlify.app/)
 
 Welcome to Splurge, your one-stop destination for a remarkable online shopping experience! Say goodbye to the hassle of traditional shopping and embrace the future of e-commerce. With Splurge, shopping becomes a pleasure, not a chore.  Explore an extensive collection of products from various categories, ensuring there's something for everyone. Whether you're a tech enthusiast, fashionista, or bookworm, Splurge has you covered.
 
 ## 🔗 Web App Link
 ```
-  https://splurge.netlify.app/
+  https://splurge-react.netlify.app
 ```
 
 ## Features
@@ -50,9 +50,9 @@ Install the node modules with npm
 
 ## Screenshots of the User Interface
 
-![App Screenshot]()
-![App Screenshot]()
-![App Screenshot]()
+![App Screenshot](https://res.cloudinary.com/dqab7rimk/image/upload/v1698497642/prudhvi-portfolio/splurge-screenshot1_vtqjov.jpg)
+![App Screenshot](https://res.cloudinary.com/dqab7rimk/image/upload/v1698497638/prudhvi-portfolio/splurge-screenshot2_toiwaz.jpg)
+
 ## Dockerizing the react application
 
 To deploy the application made with react in a Docker container -
