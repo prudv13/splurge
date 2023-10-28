@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import { STATUS } from '../../utils/status'
 import Loader from '../../components/Loader/Loader'
 import ProductList from '../../components/ProductList/ProductList'
-import { clearSearch, fetchAsyncSearchProduct, getSearchProducts, getSearchProductsStatus, setSearchTerm } from '../../store/searchSlice'
+import { clearSearch, fetchAsyncSearchProduct, getSearchProducts, getSearchProductsStatus } from '../../store/searchSlice'
 
 
 const Search = () => {
