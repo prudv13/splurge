@@ -52,14 +52,3 @@ Install the node modules with npm
 
 ![App Screenshot](https://res.cloudinary.com/dqab7rimk/image/upload/v1698497642/prudhvi-portfolio/splurge-screenshot1_vtqjov.jpg)
 ![App Screenshot](https://res.cloudinary.com/dqab7rimk/image/upload/v1698497638/prudhvi-portfolio/splurge-screenshot2_toiwaz.jpg)
-
-## Dockerizing the react application
-
-To deploy the application made with react in a Docker container -
-- Create a Dockerfile.
-- Build the Docker image.
-- Run the Docker container
-- Push the Docker image to Docker Hub
-
-
-[![N|dockerhub](imgurl)](https://hub.docker.com/r/prudv13/)
