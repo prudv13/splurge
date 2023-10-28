@@ -23,7 +23,7 @@ const CategoryProduct = () => {
       <div className='container'>
         <div className='cat-products-content'>
           <div className='title-md px-4 py-2'>
-            <h3>See our <span className='text-capitalize'>{category.replace("-", " ")}</span></h3>
+            <h3>See our {category.replace("-", " ")}</h3>
           </div>
 
           {

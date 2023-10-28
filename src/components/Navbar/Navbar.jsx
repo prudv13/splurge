@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.scss'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,6 +14,13 @@ const Navbar = () => {
   const categories = useSelector(getAllCategories);
   const carts = useSelector(getAllCarts);
   const itemsCount = useSelector(getCartItemsCount);
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchTerm = (e) => {
+    e.preventDefault();
+    setSearchTerm(e.target.value);
+  }
 
   useEffect(() => {
     dispatch(getCartTotal());
@@ -39,8 +46,8 @@ const Navbar = () => {
         <div className='navbar-collapse w-100'>
           <div className='navbar-search bg-white'>
             <div className='flex align-center'>
-              <input type='text' className='form-control fs-14' placeholder='Search your preferred items here' />
-              <Link to='' className='text-white search-btn flex align-center justify-center'>
+              <input type='text' className='form-control fs-14' placeholder='Search your preferred items here' onChange={(e) => handleSearchTerm(e)} />
+              <Link to={`search/${searchTerm}`} className='text-white search-btn flex align-center justify-center'>
                 <i className='fa-solid fa-magnifying-glass'></i>
               </Link>
             </div>
